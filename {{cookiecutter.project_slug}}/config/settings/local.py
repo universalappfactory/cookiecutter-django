@@ -85,6 +85,10 @@ if env("USE_DOCKER") == "yes":
 INSTALLED_APPS += ["django_extensions"]  # noqa F405
 {% if cookiecutter.use_celery == 'y' -%}
 
+{%- if cookiecutter.use_vs_code == 'y' %}
+INSTALLED_APPS = ["django_debugger"] + INSTALLED_APPS
+{%- endif %}
+
 # Celery
 # ------------------------------------------------------------------------------
 {% if cookiecutter.use_docker == 'n' -%}
