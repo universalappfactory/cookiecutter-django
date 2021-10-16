@@ -1,6 +1,11 @@
 -r base.txt
 
+{%- if cookiecutter.use_vs_code == 'y' %}
+debugpy==1.3.0
+django-debugger==0.6
+{%- else %}
 Werkzeug==2.0.2 # https://github.com/pallets/werkzeug
+{%- endif %}
 ipdb==0.13.9  # https://github.com/gotcha/ipdb
 {%- if cookiecutter.use_docker == 'y' %}
 psycopg2==2.9.1  # https://github.com/psycopg/psycopg2
