@@ -32,6 +32,16 @@
                 "panel": "new"
             },
             "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "create-superuser",
+            "command": "docker-compose -f local.yml run --rm django python manage.py createsuperuser",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
         }
     ]
 }
