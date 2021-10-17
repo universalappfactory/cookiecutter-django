@@ -26,6 +26,10 @@ flower==1.2.0  # https://github.com/mher/flower
 {%- if cookiecutter.use_async == 'y' %}
 uvicorn[standard]==0.18.3  # https://github.com/encode/uvicorn
 {%- endif %}
+{%- if cookiecutter.add_vue_support == 'y' %}
+#Webpack loader
+django-webpack-loader==0.6.0
+{%- endif %}
 
 # Django
 # ------------------------------------------------------------------------------

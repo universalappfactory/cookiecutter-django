@@ -53,6 +53,7 @@
   "use_whitenoise": "n",
   "use_heroku": "n",
   "use_vs_code": "n",
+  "add_vue_support": "n",
   "ci_tool": [
     "None",
     "Travis",
