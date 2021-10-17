@@ -10,6 +10,7 @@ yarn install
 # Using vue in your django templates
 
 e.g. an index.html
+{% raw %}
 ```
 {% load render_bundle from webpack_loader %}
 
@@ -21,6 +22,7 @@ e.g. an index.html
 {% render_bundle 'chunk-vendors' %}
 {% render_bundle 'vue_app_01' %}
 ```
+{% endraw %}
 
 Then you need to start develop mode or build for production
 
