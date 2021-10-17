@@ -1,3 +1,4 @@
+{% raw %}
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
@@ -56,3 +57,4 @@ a {
   color: #42b983;
 }
 </style>
+{% endraw %}
