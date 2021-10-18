@@ -2,7 +2,9 @@
 Base settings to build other settings files upon.
 """
 from pathlib import Path
-
+{% if cookiecutter.add_vue_support == "y" -%}
+import os
+{%- endif %}
 import environ
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
@@ -352,5 +354,23 @@ SPECTACULAR_SETTINGS = {
     ],
 }
 {%- endif %}
+
+{% if cookiecutter.add_vue_support == "y" -%}
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+VUE_FRONTEND_DIR = os.path.join(BASE_DIR, 'vue_frontend')
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'CACHE': not DEBUG,
+        'BUNDLE_DIR_NAME': 'vue/',  # must end with slash
+        'STATS_FILE': os.path.join(VUE_FRONTEND_DIR, 'webpack-stats.json'),
+        'POLL_INTERVAL': 0.1,
+        'TIMEOUT': None,
+        'IGNORE': [r'.+\.hot-update.js', r'.+\.map']
+    }
+}
+INSTALLED_APPS += ["webpack_loader"]
+{%- endif %}
+
+
 # Your stuff...
 # ------------------------------------------------------------------------------
