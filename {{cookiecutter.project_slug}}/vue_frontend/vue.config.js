@@ -3,7 +3,7 @@ const BundleTracker = require("webpack-bundle-tracker");
 
 const pages = {
     'vue_app_01': {
-        entry: './src/main.js',
+        entry: './src/main.ts',
         chunks: ['chunk-vendors']
     },
 }
