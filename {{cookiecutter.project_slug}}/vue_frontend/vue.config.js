@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const BundleTracker = require("webpack-bundle-tracker");
 
 const pages = {
