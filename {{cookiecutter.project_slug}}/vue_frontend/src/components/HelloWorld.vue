@@ -1,3 +1,4 @@
+{% raw %}
 <template>
   <div>
     Hello {{message}}!
@@ -5,3 +6,4 @@
 </template>
 
 <script lang="ts" src="./HelloWorld.ts"></script>
+{% endraw %}
